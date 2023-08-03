@@ -1,1 +1,12 @@
-<p>tasklist works!</p>
+<div class="task-container">
+    <h1 class="header">Tasks</h1>
+    <div *ngIf="!taskList.length">Nothing to see here...</div>
+    <div *ngFor="let task of taskList" class="task-card">
+        <h3 class="task-description">{{task.description}}</h3>
+        <div class="task-bottom">
+            <span>{{task.priority}}</span><span>{{task.due}}</span>
+        </div>
+    </div>
+
+    
+</div>

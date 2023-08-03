@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Todo } from 'src/app/todo';
 
 @Component({
   selector: 'app-tasklist',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./tasklist.component.css']
 })
 export class TasklistComponent {
-
+  @Input() taskList!: Todo[];
 }
