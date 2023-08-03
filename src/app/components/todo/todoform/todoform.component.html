@@ -1,0 +1,13 @@
+<div class="container">
+    <h1 class="header">Todo</h1>
+    <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+        <h3 class="form-header">Description: <input type="text" formControlName="description"></h3>
+        <h3 class="form-header">Priority: 
+            High<input type="radio" value="high" formControlName="priority"> 
+            Medium<input type="radio" value="medium" formControlName="priority"> 
+            Low<input type="radio" value="low" formControlName="priority">
+        </h3>
+        <h3 class="form-header">Due: <input type="text" formControlName="due"></h3>
+        <button type="submit">Add Todo</button>
+    </form>
+</div>
