@@ -3,11 +3,15 @@
     <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
         <h3 class="form-header">Description: <input type="text" formControlName="description"></h3>
         <h3 class="form-header">Priority: 
-            High<input type="radio" value="High" formControlName="priority"> 
-            Medium<input type="radio" value="Medium" formControlName="priority"> 
+            High<input type="radio" value="High" formControlName="priority">    
+            Medium<input type="radio" value="Medium" formControlName="priority">    
             Low<input type="radio" value="Low" formControlName="priority">
         </h3>
-        <h3 class="form-header">Due: <input type="text" formControlName="due"></h3>
-        <button type="submit">Add Todo</button>
+        <div style="display: flex; flex-direction: column; align-items: flex-end;">
+            <h3 class="form-header">Due: <input type="date" formControlName="due"></h3>
+            <p *ngIf="todoForm.get('due')?.hasError('dateInPast')" class="error">You cannot select a past date, select an appropriate date</p>
+            <p *ngIf="todoForm.get('due')?.hasError('required')" class="error">Select a date</p>
+        </div>
+        <button type="submit" [disabled]="!todoForm.valid">Add Todo</button>
     </form>
 </div>

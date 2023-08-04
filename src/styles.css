@@ -8,3 +8,10 @@ body {
     color: orangered;
     font-weight: bold;
 }
+
+.error {
+    font-family: monospace;
+    color: red;
+    width: 80%;
+    text-align: right;
+}
