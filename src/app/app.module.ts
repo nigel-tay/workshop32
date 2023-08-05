@@ -8,6 +8,7 @@ import { TodoparentComponent } from './components/todoparent/todoparent.componen
 import { TodoformComponent } from './components/todo/todoform/todoform.component';
 import { TasklistComponent } from './components/todo/tasklist/tasklist.component';
 import { MaterialModule } from './material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MaterialModule } from './material/material.module';
     AppRoutingModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
