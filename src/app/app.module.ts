@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodoparentComponent } from './components/todoparent/todoparent.component';
 import { TodoformComponent } from './components/todo/todoform/todoform.component';
 import { TasklistComponent } from './components/todo/tasklist/tasklist.component';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TasklistComponent } from './components/todo/tasklist/tasklist.component
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MaterialModule,
     FormsModule,
     ReactiveFormsModule
   ],
